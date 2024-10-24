@@ -8,7 +8,7 @@ body{
     margin: 0;
     padding: 0px;
     font-family: 'Open Sans',sans-serif;
-    background-color: #070F2B;
+    background-color: #FFFFFF;
 }
 
 .wrapper{
@@ -22,7 +22,7 @@ body{
     font-weight: bold;
     float: left;
     font-family: courier;
-    color: #FFFFFF;
+    color: #070F2B;
 }
 
 .menu{
