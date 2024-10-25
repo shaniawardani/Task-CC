@@ -13,19 +13,34 @@
             <div class="menu">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#project">Project</a></li>
                     <li><a href="#aboutus">About Us</a></li>
-                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#project">Project</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="" class="tbl-biru">Sign Up</a></li>
+                    <li><a href="" class="tbl-biru">Sign In</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+  <!-- Form Sign In Modal -->
+  <div id="login-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+</div>
     <div class="wrapper">
         <!-- untuk home -->
         <section id="home">
-            <img src="assets/images/Dashboard1.png" alt="Deskripsi Gambar"/>
+            <img src="https://raw.githubusercontent.com/shaniawardani/Task-CC/refs/heads/master/assets/Dashboard1.png" width="1000" height="500"/>
             <div class="kolom">
                 <p class="deskripsi">Hello!</p>
                 <h2>Innovation happens at the intersection of technology and imagination</h2>
@@ -34,8 +49,31 @@
             </div>
         </section>
 
-        <!-- untuk Project -->
-        <section id="Project">
+        <!-- untuk aboutus -->
+        <section id="aboutus">
+            <div class="tengah">
+                <div class="kolom">
+                    <h2>Our Tim</h2>
+                </div>
+
+                <div class="tutor-list">
+                    <div class="kartu-tutor">
+                        <img src="https://dfu1k3y1rami2.cloudfront.net/wp-content/uploads/2014/07/26195109/2020_cb.jpg"/>
+                        <p>Aurellia Rasya Gunawan</p>
+                        <p>1101213479</p>
+                        <p>ig:@aurelliarg</p>
+                    </div>
+                    <div class="kartu-tutor">
+                        <img src="https://images.ctfassets.net/1wryd5vd9xez/4DxzhQY7WFsbtTkoYntq23/a4a04701649e92a929010a6a860b66bf/https___cdn-images-1.medium.com_max_2000_1_Y6l_FDhxOI1AhjL56dHh8g.jpeg"/>
+                        <p>Shania Wardani</p>
+                        <p>1101213427</p>
+                        <p>ig:@shania.wardani</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- untuk project -->
+        <section id="project">
             <div class="kolom">
                 <p class="deskripsi">You Will Need This</p>
                 <h2>Online Courses</h2>
@@ -44,55 +82,6 @@
                 <p><a href="" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
             </div>
             <img src="https://img.freepik.com/free-vector/online-learning-isometric-concept_1284-17947.jpg?size=626&ext=jpg&ga=GA1.2.1769275626.1605867161"/>
-        </section>
-
-        <!-- untuk aboutus -->
-        <section id="aboutus">
-            <div class="tengah">
-                <div class="kolom">
-                    <h2>Our Tim</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, optio!</p>
-                </div>
-
-                <div class="tutor-list">
-                    <div class="kartu-tutor">
-                        <img src="https://dfu1k3y1rami2.cloudfront.net/wp-content/uploads/2014/07/26195109/2020_cb.jpg"/>
-                        <p>Aurellia Rasya Gunawan</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <img src="https://images.ctfassets.net/1wryd5vd9xez/4DxzhQY7WFsbtTkoYntq23/a4a04701649e92a929010a6a860b66bf/https___cdn-images-1.medium.com_max_2000_1_Y6l_FDhxOI1AhjL56dHh8g.jpeg"/>
-                        <p>Shania Wardani</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- untuk partners -->
-        <section id="partners">
-            <div class="tengah">
-                <div class="kolom">
-                    <p class="deskripsi">Our Top Partners</p>
-                    <h2>Partners</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi magni tempore expedita sequi. Similique rerum doloremque impedit saepe atque maxime.</p>
-                </div>
-
-                <div class="partner-list">
-                    <div class="kartu-partner">
-                        <img src="https://www.designevo.com/res/templates/thumb_small/black-wheat-and-mortarboard.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-63.jpg"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-62.jpg"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://www.designevo.com/res/templates/thumb_small/encircled-branches-and-book.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-64.jpg"/>
-                    </div>
-                </div>
-            </div>
         </section>
     </div>
 
@@ -120,4 +109,5 @@
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>

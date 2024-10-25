@@ -8,6 +8,40 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans',sans-serif;
+    background-color: #ffffff;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .wrapper {
@@ -36,7 +70,7 @@ nav {
     position: sticky;
     position: -webkit-sticky; 
     top: 0;
-    background: #FFFFFF;
+    background: #B9E5E8;
     z-index: 1;
     border-bottom:1px solid #364f6b;
 }
@@ -133,28 +167,31 @@ p {
 }
 
 .tutor-list {
-    width: 100%;
-    position: relative;
     display: flex;
+    justify-content: center;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
 .kartu-tutor {
-    width: 30%;
-    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .kartu-tutor img {
-    width: 60%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    margin-bottom: 15px;
 }
 
 .kartu-tutor p {
-    font-family: 'comic sans ms';
-    font-weight: 800;
-    font-size: 25px;
-    text-align: center;
-    color: #364f6b;
+    margin: 5px 0;
+    font-size: 1em;
 }
 
 .partner-list {
@@ -175,7 +212,7 @@ p {
 }
 
 #contact {
-    background: #dedede;
+    background: #001F3F;
     padding:50px 0px 50px 0px;
 }
 
