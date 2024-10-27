@@ -3,111 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskCloudComputing</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
 </head>
 <body>
-    <nav>
-        <div class="wrapper">
-            <div class="logo"><a href=''>Big Task</a></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#aboutus">About Us</a></li>
-                    <li><a href="#project">Project</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="" class="tbl-biru">Sign In</a></li>
-                </ul>
+    <div class="login-container">
+        <form id="loginForm">
+            <h1>Login</h1>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username" required>
             </div>
-        </div>
-    </nav>
-  <!-- Form Sign In Modal -->
-  <div id="login-modal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Login</h2>
-        <form id="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit" class="submit-btn">Login</button>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p id="login-status"></p>
         </form>
     </div>
-</div>
-    <div class="wrapper">
-        <!-- untuk home -->
-        <section id="home">
-            <img src="https://raw.githubusercontent.com/shaniawardani/Task-CC/refs/heads/master/assets/Dashboard1.png" width="1000" height="500"/>
-            <div class="kolom">
-                <p class="deskripsi">Hello!</p>
-                <h2>Innovation happens at the intersection of technology and imagination</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, nobis.</p>
-                <p><a href="" class="tbl-pink">Pelajari Lebih Lanjut</a></p>
-            </div>
-        </section>
-
-        <!-- untuk aboutus -->
-        <section id="aboutus">
-            <div class="tengah">
-                <div class="kolom">
-                    <h2>Our Tim</h2>
-                </div>
-
-                <div class="tutor-list">
-                    <div class="kartu-tutor">
-                        <img src="https://dfu1k3y1rami2.cloudfront.net/wp-content/uploads/2014/07/26195109/2020_cb.jpg"/>
-                        <p>Aurellia Rasya Gunawan</p>
-                        <p>1101213479</p>
-                        <p>ig:@aurelliarg</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <img src="https://github.com/shaniawardani/Task-CC/blob/master/assets/ShaniaPicture.jpeg"/>
-                        <p>Shania Wardani</p>
-                        <p>1101213427</p>
-                        <p>ig:@shania.wardani</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- untuk project -->
-        <section id="project">
-            <div class="kolom">
-                <p class="deskripsi">You Will Need This</p>
-                <h2>Online Courses</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt voluptatibus possimus blanditiis reiciendis. Qui, facilis! Delectus exercitationem dolores sapiente?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt voluptatibus possimus blanditiis reiciendis. Qui, facilis! Delectus exercitationem dolores sapiente?</p>
-                <p><a href="" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
-            </div>
-            <img src="https://img.freepik.com/free-vector/online-learning-isometric-concept_1284-17947.jpg?size=626&ext=jpg&ga=GA1.2.1769275626.1605867161"/>
-        </section>
-    </div>
-
-    <div id="contact">
-        <div class="wrapper">
-            <div class="footer">
-                <div class="footer-section">
-                    <h3>Task</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa!</p>
-                </div>
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa!</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Telekomunikasi Street, Terusan Buah Batu Indonesia, Bandung, Indonesia</p>
-                    <p>Kode Pos: 40257</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Social</h3>
-                    <p><b>YouTube: </b>Programming di RumahRafif</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src="Script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

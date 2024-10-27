@@ -1,34 +1,97 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const loginModal = document.getElementById("login-modal");
-    const signInBtn = document.getElementById("signInBtn");
-    const closeBtn = document.querySelector(".close-btn");
-    const loginForm = document.getElementById("login-form");
+// Static user data to simulate a JSON file. You can replace this with an actual API or JSON fetch.
+const users = {
+    "user1": "123987",
+    "user2": "mypassword"
+};
 
-    // Show the modal when "Sign In" is clicked
-    signInBtn.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent default link behavior
-        loginModal.style.display = "block"; // Show the modal
-    });
+// Function to authenticate user
+function authenticate(username, password) {
+    return users[username] === password;
+}
 
-    // Close the modal when the close button is clicked
-    closeBtn.addEventListener("click", function() {
-        loginModal.style.display = "none"; // Hide the modal
-    });
+// Form submission handling
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    // Close the modal when clicking outside of the modal content
-    window.addEventListener("click", function(event) {
-        if (event.target === loginModal) {
-            loginModal.style.display = "none"; // Hide the modal
-        }
-    });
+    // Get values from the form
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const loginStatus = document.getElementById("login-status");
 
-    // Handle login form submission (optional)
-    loginForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        // Here you can add your login logic
-        console.log("Username:", document.getElementById("username").value);
-        console.log("Password:", document.getElementById("password").value);
-        // Hide the modal after submission
-        loginModal.style.display = "none";
-    });
+    // Authenticate user
+    if (authenticate(username, password)) {
+        loginStatus.style.color = "green";
+        loginStatus.innerText = "Login Successful!";
+        window.location.href = "dashboard.html"; // Redirect to the dashboard
+    } else {
+        loginStatus.innerText = "Username or Password is incorrect!";
+    }
 });
+fetch("users.json")
+    .then(response => response.json())
+    .then(data => {
+        const users = data;
+
+        // Form submission handling
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const loginStatus = document.getElementById("login-status");
+
+            if (users[username] === password) {
+                loginStatus.style.color = "green";
+                loginStatus.innerText = "Login Successful!";
+                window.location.href = "dashboard.html";
+            } else {
+                loginStatus.innerText = "Username or Password is incorrect!";
+            }
+        });
+    });
+    
+// Function to load and display data
+async function loadAboutData() {
+    try {
+        // Fetch data from the JSON file
+        const response = await fetch('project.json'); // Adjust path if needed
+        if (!response.ok) throw new Error("Failed to fetch About data.");
+
+        const data = await response.json();
+
+        // Update title and description (if any)
+        document.getElementById('about-title').textContent = data.title || "About Us";
+        document.getElementById('about-description').textContent = data.description || "Meet our team members";
+
+        // Display team members
+        const teamList = document.getElementById('team-list');
+        data.tutors.forEach(member => {
+            // Create and add member elements
+            const memberElement = createMemberElement(member);
+            teamList.appendChild(memberElement);
+        });
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+// About.js
+
+fetch('project.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const teamList = document.getElementById('team-list');
+    data.teamMembers.forEach(member => {
+      const memberDiv = document.createElement('div');
+      memberDiv.classList.add('team-member');
+      memberDiv.innerHTML = `<h4>${member.name}</h4><p>${member.role}</p>`;
+      teamList.appendChild(memberDiv);
+    });
+  })
+  .catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+  });
