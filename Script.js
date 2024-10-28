@@ -43,13 +43,13 @@ fetch("users.json")
             if (users[username] === password) {
                 loginStatus.style.color = "green";
                 loginStatus.innerText = "Login Successful!";
-                window.location.href = "dashboard.html";
+                window.location.href = "Dashboard.html";
             } else {
                 loginStatus.innerText = "Username or Password is incorrect!";
             }
         });
     });
-    
+
 // Function to load and display data
 async function loadAboutData() {
     try {
