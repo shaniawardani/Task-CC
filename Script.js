@@ -95,4 +95,5 @@ fetch('project.json')
   })
   .catch(error => {
     console.error('There has been a problem with your fetch operation:', error);
+    console.log("Script.js berhasil diload");
   });
