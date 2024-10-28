@@ -22,7 +22,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     if (authenticate(username, password)) {
         loginStatus.style.color = "green";
         loginStatus.innerText = "Login Successful!";
-        window.location.href = "Dashboard.html"; // Redirect to the dashboard
+        window.location.href = "dashboard.html"; // Redirect to the dashboard
     } else {
         loginStatus.innerText = "Username or Password is incorrect!";
     }
@@ -43,10 +43,11 @@ fetch("users.json")
             if (users[username] === password) {
                 loginStatus.style.color = "green";
                 loginStatus.innerText = "Login Successful!";
-                window.location.href = "Dashboard.html";
+                window.location.href = "dashboard.html";
             } else {
                 loginStatus.innerText = "Username or Password is incorrect!";
             }
+            console.log("Script.js berhasil diload");
 
         });
     });
@@ -95,5 +96,4 @@ fetch('project.json')
   })
   .catch(error => {
     console.error('There has been a problem with your fetch operation:', error);
-    console.log("Script.js berhasil diload");
   });
