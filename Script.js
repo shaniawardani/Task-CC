@@ -22,7 +22,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     if (authenticate(username, password)) {
         loginStatus.style.color = "green";
         loginStatus.innerText = "Login Successful!";
-        window.location.href = "dashboard.html"; // Redirect to the dashboard
+        window.location.href = "Dashboard.html"; // Redirect to the dashboard
     } else {
         loginStatus.innerText = "Username or Password is incorrect!";
     }
@@ -47,6 +47,7 @@ fetch("users.json")
             } else {
                 loginStatus.innerText = "Username or Password is incorrect!";
             }
+
         });
     });
 
